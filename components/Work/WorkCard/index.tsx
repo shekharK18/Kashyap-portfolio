@@ -9,10 +9,10 @@ import Link from 'next/link';
 
 type WorkCardProps = {
     work: workType;
+
 }
 
 const WorkCard = ({ work }: WorkCardProps) => {
-
     const src = urlFor(work.imgUrl).url();
 
     return (
