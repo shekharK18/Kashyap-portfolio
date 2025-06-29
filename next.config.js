@@ -19,6 +19,7 @@ const nextConfig = {
         port: "",
       },
     ],
+    domains: ['cdn.jsdelivr.net'],
   },
 };
 

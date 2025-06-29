@@ -1,51 +1,70 @@
 "use client"
 
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import React from 'react'
 
-import { motion } from 'framer-motion'
+// Helper to check if the src is an image (gif, svg, png, jpg, jpeg)
+const isImage = (src: string) =>
+  /\.(gif|svg|png|jpe?g)$/i.test(src) || src.startsWith('http');
+
+const devopsSkills = [
+  { name: 'Docker', src: '/Animation - 1750871380834.gif' },
+  { name: 'Automate-Business', src: 'automate-business-processes-14009434-11266754.mp4' },
+  { name: 'Azure', src: 'azure-13156227-10740813.mp4' },
+  { name: 'Cloud Monitoring', src: 'cloud monitoring1.mp4' },
+  { name: 'AWS', src: 'aws-13156224-10740810.mp4' },
+  { name: 'AirFlow', src: '/nir_post_89_01_airflow_spinning_logo.gif' },
+  { name: 'Linux', src: 'free-linux-animated-icon-download-in-lottie-json-gif-static-svg-file-formats--logo-brand-logos-pack-icons-6671446.mp4' },
+];
 
 const Skills = () => {
-
-  const skills = [
-    'https://i.postimg.cc/QCpkR50c/html.png',
-    'https://i.postimg.cc/SNhGcTxd/css.png',
-    'https://i.postimg.cc/gj9HS4qY/javascript.png',
-    'https://i.postimg.cc/N03XBFyD/sass.png',
-    'https://i.postimg.cc/bYQxYx9t/tailwind.png',
-    'https://i.postimg.cc/DzJG9Lzm/typescript.png',
-    'https://i.postimg.cc/13Y67JsL/react.png',
-    'https://i.postimg.cc/HkTB1ZGn/nextjs.png',
-    'https://i.postimg.cc/50zwCLcD/mongo-db.png',
-    'https://i.postimg.cc/VvBn7wkR/nodejs.png',
-    'https://i.postimg.cc/d0xBdJhZ/git.png',
-    'https://i.postimg.cc/SNffd6Xh/github.png'
-  ];
-
   return (
-    <div id="skills" className='skills max-w-7xl mx-auto px-3 py-16 sm:py-20'>
+    <div id="skills" className="skills max-w-7xl mx-auto px-3 py-16 sm:py-20">
       <motion.p
         initial={{ scale: 0.4, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ type: "spring", duration: 0.4 }}
-        className="text-3xl sm:text-5xl font-bold text-center">
-        <span className="about mr-2">My</span>
-        <span className="aboutme bg-gradient-to-r from-blue-500 via-purple-600 to-red-500 text-transparent bg-clip-text">Skills</span>
+        className="text-3xl sm:text-5xl font-bold text-center"
+      >
+        <span className="about mr-2">DevOps</span>
+        <span className="aboutme bg-gradient-to-r from-green-400 via-blue-500 to-indigo-600 text-transparent bg-clip-text">Skills</span>
       </motion.p>
-      <div className="aboutContainer grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 m-8 sm:m-16 md:mx-0 justify-evenly place-items-center">
-        {
-          skills.map((i: string, idx: number) => <motion.div
-            key={idx}
+      <div className="aboutContainer grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 m-8 sm:m-16 justify-evenly place-items-center">
+        {devopsSkills.map((skill) => (
+          <motion.div key={skill.name}
             initial={{ scale: 0.4, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ type: "tween", duration: 0.4 }}
           >
-            <Image src={i} alt={'skills'} width={300} height={300} className='w-24 sm:w-36 md:w-48' draggable={false} />
+            {isImage(skill.src) ? (
+              <Image
+                src={skill.src}
+                alt={skill.name}
+                width={100}
+                height={100}
+                className="w-24 sm:w-36 md:w-48"
+                draggable={false}
+                unoptimized={skill.src.startsWith('http')}
+              />
+            ) : (
+              <video
+                src={skill.src}
+                width={100}
+                height={100}
+                className="w-24 sm:w-36 md:w-48"
+                autoPlay
+                loop
+                muted
+                playsInline
+                draggable={false}
+                aria-label={skill.name}
+              />
+            )}
           </motion.div>
-          )
-        }
+        ))}
       </div>
-    </div >
+    </div>
   )
 }
 

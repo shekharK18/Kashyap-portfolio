@@ -26,11 +26,11 @@ const Contact = () => {
             </motion.p>
             <div className="contactContainer flex justify-evenly items-center flex-col gap-4 md:flex-row mt-6">
                 <div className="links flex flex-col gap-2">
-                    <LinkContainer src={gmail} text='sensaurabh1212@gmail.com' href="mailto:sensaurabh1212@gmail.com" />
-                    <LinkContainer src={calling} text='+918305781500' href="tel:+91-8305781500" />
-                    <LinkContainer src={github} text='GitHub' href='https://github.com/saurabh-sen' />
+                    <LinkContainer src={gmail} text='shahilkashyap1@gmail.com' href="mailto:shahilkashyap1@gmail.com" />
+                    <LinkContainer src={calling} text='+91 87890 71577' href="tel:+91 87890 71577" />
+                    <LinkContainer src={github} text='GitHub' href='https://github.com/shekharK18' />
                     <LinkContainer src={leetcode} text='Leetcode' href="https://leetcode.com/Saurabh_Sen" />
-                    <LinkContainer src={linkedin} text='Linkedin' href="https://linkedin.com/in/saurabh-sen-profile" />
+                    <LinkContainer src={linkedin} text='Linkedin' href="https://www.linkedin.com/in/shekhar-kashyap-5b99551aa/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" />
                 </div>
                 <span className="or text-3xl sm:text-5xl font-semibold">OR</span>
                 <ContactForm />
