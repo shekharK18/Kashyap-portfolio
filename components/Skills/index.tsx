@@ -16,6 +16,8 @@ const devopsSkills = [
   { name: 'AWS', src: 'aws-13156224-10740810.mp4' },
   { name: 'AirFlow', src: '/nir_post_89_01_airflow_spinning_logo.gif' },
   { name: 'Linux', src: 'free-linux-animated-icon-download-in-lottie-json-gif-static-svg-file-formats--logo-brand-logos-pack-icons-6671446.mp4' },
+  { name: 'Jenkins', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg' }, // Jenkins SVG from CDN
+  { name: 'CI/CD Pipeline', src: 'https://cdn-icons-png.flaticon.com/512/2721/2721297.png' }, // Example pipeline icon from CDN
 ];
 
 const Skills = () => {
