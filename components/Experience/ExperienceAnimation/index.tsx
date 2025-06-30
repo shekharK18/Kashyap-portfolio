@@ -1,11 +1,16 @@
 "use client"
 import React from 'react'
-import Lottie from "lottie-react";
-import reactjs from "../../../public/reactjs.json";
 
 const ExperienceAnimation = () => {
   return (
-    <Lottie animationData={reactjs} className="expbg" />
+    <video
+      src="azure-13156227-10740813.mp4"
+      className="expbg"
+      autoPlay
+      loop
+      muted
+      playsInline
+    />
   )
 }
 
