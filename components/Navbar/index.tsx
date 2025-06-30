@@ -21,8 +21,8 @@ function ResponsiveAppBar({ Routes, SidebarRoutes }: PropsResponsiveAppBar) {
                 <Routes />
                 <div className="navbar__utils flex gap-2 items-center">
                     <ThemeToggler />
-                    <IconWithLink url="https://github.com/saurabh-sen" Icon={<AiFillGithub/>} />
-                    <IconWithLink url="https://linkedin.com/in/saurabh-sen-profile" Icon={<BiLogoLinkedin/>} />
+                    <IconWithLink url="https://github.com/shekharK18/" Icon={<AiFillGithub/>} />
+                    <IconWithLink url="https://www.linkedin.com/in/shekhar-kashyap-5b99551aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" Icon={<BiLogoLinkedin/>} />
                 </div>
             </div>
         </nav>
