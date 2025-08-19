@@ -10,7 +10,7 @@ const WorkFilters = ({ handleClick, activeFilter }: WorkFilterProps) => {
     return (
         <>
             {
-                ['All', 'Frontend', 'NextJS-ReactJS', 'Full Stack', '*Featured'].map((item, index) => (
+                ['All', 'Version Control', 'CI/CD', 'Automated Testing', '*Featured'].map((item, index) => (
                     <div
                         key={index}
                         onClick={() => handleClick(item)}
