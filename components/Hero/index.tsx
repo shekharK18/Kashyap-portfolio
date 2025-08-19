@@ -60,12 +60,12 @@ const Hero = () => {
             className="flex-1 space-y-8 max-w-2xl"
           >
             <motion.div variants={itemVariants} className='space-y-6'>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+              {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                 <span className="text-sm font-mono text-gray-600 dark:text-gray-300">
                   $ whoami --verbose
                 </span>
-              </div>
+              </div> */}
               
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 dark:from-white dark:via-blue-200 dark:to-white bg-clip-text text-transparent leading-tight">
